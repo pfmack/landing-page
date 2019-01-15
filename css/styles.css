@@ -1,0 +1,356 @@
+/***** Base Styles *****/
+
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #0b0202;
+	margin: 0 auto;
+    font-size: 10px; 
+}
+
+
+/***** Header Section *****/
+
+#header {
+	background-image: url('../img/hero-img.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+	/*height: 600px;*/
+}
+
+	#header .full-width {
+        display: grid; /**** Sets the grid for this div *****/
+        grid-template-columns: auto auto; /***** Creates two equal columns *****/
+		grid-template-rows: auto auto; /***** Creates two equal rows *****/
+		/*display: flex;
+		flex-direction: column;*/
+	}
+
+
+/***** Navigation Styles *****/
+
+#nav-bar {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding-top: 15px;
+	justify-content: space-between;
+}
+
+/*.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-image: url("../img/header-bg.png");
+	background-repeat: repeat-x;
+	z-index: 1;
+	justify-content: flex-start;
+}*/
+
+	
+ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+li {
+	list-style-type: none;
+	padding: 10px;
+}
+
+
+	li a {
+		color: white;
+		text-decoration: none;
+		font-family: 'Roboto Slab', serif;
+		font-size: 1rem;
+	}
+
+nav li a:hover {
+	background-color: #527335;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/***** Heading Styles *****/
+
+.header-text {
+	animation-name: fadeIn;
+	animation: fadeIn 5s;
+	color: whitesmoke;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	padding: 10% 200px 10% 200px; 
+	font-family: 'Roboto Slab', serif;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+h1 {
+	font-size: 2.5rem;
+	line-height: 3%;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+/***** Form Styles*****/ 
+
+form {
+	background-color: rgba(32, 34, 39, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 5px;
+    margin-left: 250px; 
+    margin-top: 50px; 
+    width: 35%;
+}
+
+#form h3 {
+	color: white;
+	font-size: 1rem;
+	text-align: center;
+}
+
+#name, #email, #message {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 5px;
+	margin-top: 5px; 
+}
+
+#submit-button {
+	background-color: #0b3c5d;
+	border-color: #0b3c5d;
+	border-radius: 5px;
+	color: white;
+	font-size: 1rem;
+	margin: 10px 0 25px 25px; 
+	padding: 5px;
+	width: 75%;
+}
+
+#submit-button:hover {
+	background-color: white;
+	border-color: #0b3c5d;
+	transition: background-color 2s;
+	color: #0b3c5d;
+} 
+
+/***** Services Section *****/
+
+#services {
+	display: grid;
+	/*display: flex;
+	flex-direction: column;*/
+	background-color: #0d1115;
+	/*height: 1300px;*/
+}
+
+#services .full-width {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: auto auto; 
+	padding-right: 120px;
+	padding-bottom: 120px;
+    /*padding-top: 50px;*/
+}
+
+
+.services-heading {
+  color: white;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.third-width h3, img {
+	color: white;
+	padding-top: 50px;
+	padding-left: 200px;
+}
+
+.third-width p {
+	color: whitesmoke;
+	font-size: 1.5em;
+	padding-left: 200px;
+}
+
+/***** Listings Section *****/
+
+#listings {
+	display: grid;
+	/*display: flex;
+	flex-direction: column;*/
+	background-color: #b7b7b7;
+	/*height: 1300px;*/
+}
+
+.listings-heading {
+	color: black;
+	padding-top: 10%;
+    text-align: center;
+}
+
+#listings .full-width {
+	display: grid;
+    grid-template-columns: repeat(3, 400px);
+	grid-template-rows: auto auto; 
+	padding-right: 120px;
+	padding-bottom: 120px; 
+}
+
+.third-width {
+	display: grid;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	align-items: start;
+	align-content: start;
+	padding-right: 80px;
+}
+
+#listing img {
+	align-items: center;
+}
+
+#listings p {
+	color: black;
+}
+
+.viewing-button,.listing-button {
+    background-color: #051a28;
+	border-color: #051a28;
+	color: white;
+	font-size: 1rem;
+	margin-left: 200px; 
+}
+
+.listing-button {
+	margin-top: 50px; 
+    
+}
+
+.listing-button:hover, .viewing-button:hover {
+	background-color: white;
+	border-color: #051a28;
+	transition: background-color 1s;
+	color: #051a28;
+	font-weight: bold;
+}
+
+/***** Agents Section *****/
+
+#agents h2 {
+	padding: 50px 0 50px 120px;
+	color: white;
+	text-align: center;
+}
+
+#agents {
+	display: grid;
+	/*display: flex;
+	flex-direction: column;*/
+	background-color: #0d1115;
+	/*height: 1300px;*/
+}
+
+#agents .full-width {
+	display: grid;
+	grid-template-columns: repeat(3, 400px);
+	grid-template-rows: auto auto; 
+	padding-right: 120px;
+	padding-bottom: 120px; 
+	/*display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;*/
+}
+
+/***** Testimonial Section *****/
+
+#testimonials {
+	display: grid;
+	background-image: url('../img/testimonial-3.png');
+    background-size: cover;
+	/*display: flex;
+	height: 500px;*/
+}
+
+	#testimonials .full-width {
+		display: grid; /**** Sets the grid for this div *****/
+        grid-template-columns: 1fr 1fr 1fr 1fr; /***** Creates two equal columns *****/
+		grid-template-rows: 1fr 1fr 1fr; /***** Creates two equal rows *****/
+		/*display: flex;
+		flex-direction: column;*/
+	}
+
+.testimonial-text {
+	color: white;
+	grid-row: 2 / span 2;
+	grid-column: 2 / span 3;
+	padding: 0 100px 50px 150px; 
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	
+	
+}
+
+/***** Footer Section *****/
+
+footer {
+	/*display: flex;
+	flex-direction: row;*/
+	/*height: 600px;*/
+}
+
+	footer .full-width {
+	display: grid;
+   	grid-template-columns: repeat(3, 400px);
+    grid-template-rows: auto auto; 
+	padding-right: 120px;
+	padding-bottom: 120px;
+	}
+
+	footer .third-width {
+		/*max-width: 33%;*/
+		
+	}
+
+	footer p {
+		padding-right: 120px;
+	}
+
+p.email {
+    color: white;
+}
+
+.social-media ul {
+	padding: 0;
+}
+
+footer li img:hover {
+	transition: 1s;
+	transform: rotate(20deg);
+	left: 500px;
+}
+
+.map {
+	padding-left: 30px;
+}
+
+
