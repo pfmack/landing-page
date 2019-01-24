@@ -7,6 +7,10 @@ body {
     font-size: 10px; 
 }
 
+.full-width {
+	display: grid; /**** Sets the grid for this class of div *****/
+	grid-template-rows: repeat (2, 1fr);  /***** Creates two equal rows *****/
+}
 
 /***** Header Section *****/
 
@@ -18,9 +22,7 @@ body {
 }
 
 	#header .full-width {
-        display: grid; /**** Sets the grid for this div *****/
         grid-template-columns: auto auto; /***** Creates two equal columns *****/
-		grid-template-rows: auto auto; /***** Creates two equal rows *****/
 		/*display: flex;
 		flex-direction: column;*/
 	}
@@ -36,17 +38,6 @@ body {
 	justify-content: space-between;
 }
 
-/*.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background-image: url("../img/header-bg.png");
-	background-repeat: repeat-x;
-	z-index: 1;
-	justify-content: flex-start;
-}*/
-
-	
 ul {
 	display: flex;
 	flex-direction: row;
@@ -164,9 +155,7 @@ form {
 }
 
 #services .full-width {
-    display: grid;
     grid-template-columns: repeat(3, 400px);
-    grid-template-rows: auto auto; 
 	padding-right: 120px;
 	padding-bottom: 120px;
     /*padding-top: 50px;*/
@@ -208,16 +197,14 @@ form {
 }
 
 #listings .full-width {
-	display: grid;
     grid-template-columns: repeat(3, 400px);
-	grid-template-rows: auto auto; 
 	padding-right: 120px;
 	padding-bottom: 120px; 
 }
 
 .third-width {
 	display: grid;
-	grid-template-rows: auto auto;
+	grid-template-rows: repeat (2, 1fr);
 	justify-content: center;
 	align-items: start;
 	align-content: start;
@@ -270,9 +257,7 @@ form {
 }
 
 #agents .full-width {
-	display: grid;
 	grid-template-columns: repeat(3, 400px);
-	grid-template-rows: auto auto; 
 	padding-right: 120px;
 	padding-bottom: 120px; 
 	/*display: flex;
@@ -293,8 +278,8 @@ form {
 
 	#testimonials .full-width {
 		display: grid; /**** Sets the grid for this div *****/
-        grid-template-columns: 1fr 1fr 1fr 1fr; /***** Creates two equal columns *****/
-		grid-template-rows: 1fr 1fr 1fr; /***** Creates two equal rows *****/
+        grid-template-columns: 1fr 1fr 1fr 1fr; /**** Creates four equal columns ****/
+		grid-template-rows: 1fr 1fr 1fr; /***** Creates three equal rows *****/
 		/*display: flex;
 		flex-direction: column;*/
 	}
