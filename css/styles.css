@@ -15,17 +15,19 @@ body {
 /***** Header Section *****/
 
 #header {
+	display: grid;
 	background-image: url('../img/hero-img.png');
 	background-repeat: no-repeat;
     background-size: cover;
 	/*height: 600px;*/
 }
 
-	#header .full-width {
-        grid-template-columns: auto auto; /***** Creates two equal columns *****/
+#header .full-width {
+	grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); 
 		/*display: flex;
 		flex-direction: column;*/
 	}
+
 
 
 /***** Navigation Styles *****/
@@ -50,12 +52,12 @@ li {
 }
 
 
-	li a {
-		color: white;
-		text-decoration: none;
-		font-family: 'Roboto Slab', serif;
-		font-size: 1rem;
-	}
+li a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1rem;
+}
 
 nav li a:hover {
 	background-color: #527335;
@@ -72,7 +74,7 @@ nav li a:hover {
 	color: whitesmoke;
 	font-size: 1.2rem;
 	line-height: 1.5rem;
-	padding: 10% 200px 10% 200px; 
+	padding: 10% 200px 10% 100px; 
 	font-family: 'Roboto Slab', serif;
 }
 
@@ -119,11 +121,11 @@ form {
 	text-align: center;
 }
 
-#name, #email, #message {
+#name, #email, #phone {
 	margin-left: 20px;
 	margin-right: 20px;
-	padding: 5px;
-	margin-top: 5px; 
+	padding: 15px;
+	margin-top: 25px; 
 }
 
 #submit-button {
@@ -155,16 +157,17 @@ form {
 }
 
 #services .full-width {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(auto-fill, 400px);
 	grid-gap: 30px;
 	padding-bottom: 120px; 
+	justify-items: center; 
 }
 
 
 .services-heading {
   color: white;
-  padding-top: 10%;
   text-align: center;
+  padding: 100px 0 50px 0px;
 }
 
 .third-width h3, img {
@@ -196,9 +199,10 @@ form {
 }
 
 #listings .full-width {
-    grid-template-columns: repeat(3, 400px);
+	grid-template-columns: repeat(auto-fill, 400px);
 	grid-gap: 30px; 
 	padding-bottom: 120px; 
+	justify-items: center; 
 }
 
 .third-width {
@@ -236,7 +240,7 @@ form {
 /***** Agents Section *****/
 
 #agents h2 {
-	padding: 50px 0 50px 120px;
+	padding: 50px 0 50px 0px;
 	color: white;
 	text-align: center;
 }
@@ -250,9 +254,10 @@ form {
 }
 
 #agents .full-width {
-	grid-template-columns: repeat(3, 400px);
+	grid-template-columns: repeat(auto-fill, 400px);
 	grid-gap: 30px; 
 	padding-bottom: 120px; 
+	justify-items: center; 
 	/*display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -269,13 +274,12 @@ form {
 	height: 500px;*/
 }
 
-	#testimonials .full-width {
-		display: grid; /**** Sets the grid for this div *****/
-        grid-template-columns: 1fr 1fr 1fr 1fr; /**** Creates four equal columns ****/
-		grid-template-rows: 1fr 1fr 1fr; /***** Creates three equal rows *****/
-		/*display: flex;
-		flex-direction: column;*/
-	}
+#testimonials .full-width {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+	grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); 
+	/*display: flex;
+	flex-direction: column;*/
+}
 
 .testimonial-text {
 	color: white;
@@ -284,51 +288,58 @@ form {
 	padding: 0 100px 50px 150px; 
 	font-size: 1.2rem;
 	line-height: 2.5rem;
-	
-	
 }
 
 /***** Footer Section *****/
 
 footer {
+	background-color: #051a28;
 	/*display: flex;
 	flex-direction: row;*/
 	/*height: 600px;*/
 }
 
-	footer .full-width {
+footer .full-width {
 	display: grid;
-   	grid-template-columns: repeat(3, 400px);
-    grid-template-rows: auto auto; 
-	padding-right: 120px;
-	padding-bottom: 120px;
-	}
+	grid-template-columns: repeat(auto-fill, 400px);
+	grid-gap: 20px; 
+	justify-items: center; 
+	padding: 50px 0 50px 0;
+}
 
-	footer .third-width {
-		/*max-width: 33%;*/
-		
-	}
-
-	footer p {
-		padding-right: 120px;
-	}
+.address {
+	padding-right: 0;
+	font-weight: 500;
+	align-content: center;
+	line-height: 40px; 
+	padding-top: 30px; 
+	font-size: 2.5em !important;
+}
 
 p.email {
     color: white;
 }
 
-.social-media ul {
-	padding: 0;
+
+.social-media {
+	color: white;
+	font-size: 2em;
+	padding-left: 50px;  
 }
 
-footer li img:hover {
-	transition: 1s;
-	transform: rotate(20deg);
-	left: 500px;
-}
-
-.map {
-	padding-left: 30px;
+.third-width a {
+	text-decoration: none; 
 }
 
 
+/***** Media Queries 
+
+@media (max-width: 700px) {
+	.header-text {
+		display: none;
+	}
+
+	#testimonials { 
+		display: none; 
+	}
+}*****/
